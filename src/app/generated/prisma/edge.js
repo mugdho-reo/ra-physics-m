@@ -156,7 +156,7 @@ const config = {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "postgresql://ra-physics_owner:npg_xVLX4p9WZOTM@ep-quiet-hill-a1fdntpd-pooler.ap-southeast-1.aws.neon.tech/ra-physics?sslmode=require"
+        "value": "postgresql://ra_physics_admin:Raphysics13@localhost:5432/ra_physics?sslmode=require"
       }
     }
   },
