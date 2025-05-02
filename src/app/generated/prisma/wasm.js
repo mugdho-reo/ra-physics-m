@@ -117,11 +117,76 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
+exports.Prisma.NoteScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  content: 'content',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  courseId: 'courseId',
+  deletedAt: 'deletedAt'
+};
+
+exports.Prisma.ExamScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  date: 'date',
+  totalMarks: 'totalMarks',
+  courseId: 'courseId',
+  createdAt: 'createdAt',
+  deletedAt: 'deletedAt'
+};
+
+exports.Prisma.ExamMarkScalarFieldEnum = {
+  id: 'id',
+  marks: 'marks',
+  studentId: 'studentId',
+  examId: 'examId'
+};
+
+exports.Prisma.NoticeScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  content: 'content',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  courseId: 'courseId',
+  deletedAt: 'deletedAt'
+};
+
+exports.Prisma.CourseScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  description: 'description',
+  class: 'class',
+  hsc: 'hsc',
+  fee: 'fee',
+  courseCode: 'courseCode',
+  deletedAt: 'deletedAt'
+};
+
+exports.Prisma.StudentScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  rollNumber: 'rollNumber',
+  password: 'password',
+  email: 'email',
+  phoneNumber: 'phoneNumber',
+  address: 'address',
+  courseId: 'courseId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  admittedById: 'admittedById',
+  updatedById: 'updatedById',
+  deletedAt: 'deletedAt'
+};
+
 exports.Prisma.UserScalarFieldEnum = {
   id: 'id',
   rollNumber: 'rollNumber',
   password: 'password',
-  role: 'role'
+  role: 'role',
+  deletedAt: 'deletedAt'
 };
 
 exports.Prisma.SortOrder = {
@@ -133,13 +198,25 @@ exports.Prisma.QueryMode = {
   default: 'default',
   insensitive: 'insensitive'
 };
-exports.role = exports.$Enums.role = {
+
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+exports.Role = exports.$Enums.Role = {
   STUDENT: 'STUDENT',
-  ADMIN: 'ADMIN'
+  ADMIN: 'ADMIN',
+  SUPER: 'SUPER'
 };
 
 exports.Prisma.ModelName = {
-  user: 'user'
+  Note: 'Note',
+  Exam: 'Exam',
+  ExamMark: 'ExamMark',
+  Notice: 'Notice',
+  Course: 'Course',
+  Student: 'Student',
+  User: 'User'
 };
 
 /**
